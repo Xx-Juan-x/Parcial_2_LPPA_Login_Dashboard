@@ -18,23 +18,20 @@ form.addEventListener("submit", function(Event){
     let errorFormulario = false;
 
     let regex_email = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-
     if(!regex_email.test(email.value)){
         errorFormulario = true;
-        mensaje_email.innerHTML = "El formato del email es incorrecto";
+        mensaje_email.innerHTML = "El formato del email es incorrecto.";
         email.classList.add("error");
         console.log("email incorrecto");
     }else{
         mensaje_email.innerHTML = "";
         email.classList.remove("error");
-
     }
     if(password.value.length < 8){
         errorFormulario = true;
-        mensaje_password.innerHTML = "La contraseña debe contener más de 8 caracteres";
+        mensaje_password.innerHTML = "La contraseña debe contener más de 8 caracteres.";
         password.classList.add("error");
-    }
-    else{
+    }else{
         mensaje_password.innerHTML = "";
         password.classList.remove("error");
     }
@@ -54,11 +51,11 @@ form.addEventListener("submit", function(Event){
         .then((data)=>{
             console.log(data);
             if (data.error == false) {
-                console.log("Logueado");
+                window.location.assign("../HTML/dashboard.html");
             }else if (data.success == false){
                 data.errors.forEach((error)=>{
                     if(error.param ==  "password"){
-                        mensaje_password.innerHTML = "Server: La contraseña debe solo letras y numeros.";
+                        mensaje_password.innerHTML = "Server: La contraseña debe contener solo letras y numeros.";
                         password.classList.add("error");
                     }
                     if(error.param ==  "email"){
@@ -66,8 +63,7 @@ form.addEventListener("submit", function(Event){
                         email.classList.add("error");
                     }
                 });
-            }
-            else if (data.error == true){
+            }else if (data.error == true){
                 mensaje_password.innerHTML = "Usuario no encontrado";
                 password.classList.add("error");
             }
