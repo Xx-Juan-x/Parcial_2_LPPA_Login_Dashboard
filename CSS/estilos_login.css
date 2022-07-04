@@ -4,6 +4,7 @@ body{
     box-sizing: border-box;
     background-image: url(https://img.freepik.com/free-vector/black-wallpaper-with-motion-lines-background_1017-30151.jpg?w=360);
     background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .conteiner-login{
@@ -13,6 +14,7 @@ body{
 
 .conteiner-imagen-form{
     margin: auto;
+    width: 85%;
     display: flex;
     flex-direction: row;
     box-shadow: 10px 15px 30px rgb(58, 58, 58);
@@ -44,7 +46,7 @@ img{
 input{
     width: 90%;
     padding: 12px;
-    margin: 25px 0 25px 0;
+    margin: 15px 0 15px 0;
     border-radius: 5px;
     border: 1px solid rgb(21, 21, 21);
     outline: none;
@@ -63,7 +65,7 @@ button{
     background-color: black;
     font-size: 15px;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 10px;
     box-shadow: 5px 5px 10px rgb(58, 58, 58);
 }
 
@@ -80,9 +82,15 @@ h2{
     font-weight: 600;
     color: white;
     margin: 10px 0 10px 0;
-    text-shadow: 0px 0px 1px white,0px 0px 1px white,0px 0px 1px;
 }
 
 .text-error{
     color: white;
+    padding-top: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px;
+    height: 20px;
+    width: 90%;
 }
