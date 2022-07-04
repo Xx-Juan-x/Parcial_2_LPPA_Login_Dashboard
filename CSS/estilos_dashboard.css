@@ -1,12 +1,11 @@
 body{
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url(https://img.freepik.com/free-vector/black-wallpaper-with-motion-lines-background_1017-30151.jpg?w=360);
+    background-image: url("../Imágenes/Fondo-Dashboard.jpeg");
     background-size: cover;
 }
 .tittle{
     display: fixed;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjHoAtSirRlygR3xGyd7Far5ChGGV3jJMFhj0TbMxdGynTD914fAvo3Wh7n8fh2MVcq6g&usqp=CAU);
     background-size: cover;
     padding: 20px;
     width: 100%;
@@ -17,27 +16,30 @@ body{
     font-size: 40px;
     font-weight: 600;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 td{
     padding: 5px 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color: white;
+    color: #fff;
 }
 
 main{
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 table{
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid #49eeff;
     width: 90%;
     margin: auto;
+    background-color: rgba(15, 15, 15, 0.3);
+    border-radius: 2px;
+    backdrop-filter:blur(7px);
 }
 
 td{
@@ -47,21 +49,23 @@ td{
 button{
     padding: 10px;
     margin-right: 30px;
-    color: white;
-    background-color: black;
+    color: rgb(212, 212, 212);
+    background-color: rgba(15, 15, 15, 0.3);
     border-radius: 5px;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
-    border: 1px solid black;
+    border:none;
     position: absolute;
     right: 0px;
     top: 21px;
+    transition: 0.2 all;
 }
 
 button:hover{
-    background-color: rgb(65, 63, 63);
-    border: 1px solid rgb(65, 63, 63);
+    background-color: rgba(15, 15, 15, 0.45);
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition-duration: 500ms;
 }
 

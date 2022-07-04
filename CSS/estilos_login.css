@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(https://img.freepik.com/free-vector/black-wallpaper-with-motion-lines-background_1017-30151.jpg?w=360);
+    background-image: url(../Imágenes/Fondo-Dashboard.jpeg);
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -14,10 +14,10 @@ body{
 
 .conteiner-imagen-form{
     margin: auto;
-    width: 85%;
+    width: 70%;
     display: flex;
     flex-direction: row;
-    box-shadow: 10px 15px 30px rgb(58, 58, 58);
+    box-shadow: 10px 15px 20px rgb(48, 48, 48);
 }
 
 .conteiner-imagen{
@@ -38,9 +38,10 @@ img{
 
 .form-login{
     display: block;
-    background-color: rgb(21, 21, 21);
+    background-color: rgba(21, 21, 21,0.85);
+    backdrop-filter: blur(7px);
     width: 55%;
-    min-height: 350px;
+    min-height: 320px;
 }
 
 input{
@@ -52,7 +53,6 @@ input{
     outline: none;
     background-color: white;
     color: black;
-    box-shadow: 5px 10px 10px rgb(58, 58, 58);
 }
 
 button{
@@ -60,13 +60,12 @@ button{
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(38, 38, 38,0.2);
     color: white;
-    background-color: black;
+    background-color: rgb(38, 38, 38,0.2);
     font-size: 15px;
     font-weight: 600;
-    margin-top: 10px;
-    box-shadow: 5px 5px 10px rgb(58, 58, 58);
+    margin-top: 20px;
 }
 
 button:hover{
@@ -75,6 +74,7 @@ button:hover{
     border: 1px solid rgba(56, 56, 56, 0.882);
     color: rgb(255, 255, 255);
     box-shadow: none;
+    transition-duration: 500ms;
 }
 
 h2{
@@ -85,7 +85,7 @@ h2{
 }
 
 .text-error{
-    color: white;
+    color: rgb(228, 49, 49);
     padding-top: 5px;
     font-family: monospace;
     font-size: 14px;
