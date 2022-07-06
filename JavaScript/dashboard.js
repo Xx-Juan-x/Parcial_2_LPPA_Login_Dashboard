@@ -1,5 +1,19 @@
 let parent = document.getElementById("table");
 let tr;
+let currentLocation;
+
+currentLocation = window.location.href;
+currentLocation = currentLocation.replace('dashboard.html',"index.html");
+
+function cerrar_session(){
+	localStorage.setItem('login', "false");
+	window.location.href = currentLocation;
+}
+
+if (localStorage.getItem("login") != "true") {
+	window.location.href = currentLocation;
+}
+
 fetch("https://basic-server-one.vercel.app/users", {
 		method: "GET",
 		headers: {

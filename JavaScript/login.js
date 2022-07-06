@@ -1,20 +1,24 @@
-/*login*/
 let email =  document.getElementById("email");
+let mensaje_email = document.querySelector(".conteiner-form .text-error.email");
 let password  = document.getElementById("password");
+let mensaje_password = document.querySelector(".conteiner-form .text-error.password");
+let form;
+let currentLocation;
 
+currentLocation = window.location.href;
+currentLocation = currentLocation.replace('index.html',"dashboard.html");
 
-
-/*validaciones*/
-let form
+if (localStorage.getItem("login") == "true") {
+	window.location.href = currentLocation;
+}
 
 form = document.getElementById("frm-login");
-let mensaje_email = document.querySelector(".conteiner-form .text-error.email");
-let mensaje_password = document.querySelector(".conteiner-form .text-error.password");
 
 form.addEventListener("submit", function(Event){
 
     Event.preventDefault();
 
+    /*Bandera*/
     let errorFormulario = false;
 
     let regex_email = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
@@ -27,6 +31,7 @@ form.addEventListener("submit", function(Event){
         mensaje_email.innerHTML = "";
         email.classList.remove("error");
     }
+
     if(password.value.length < 8){
         errorFormulario = true;
         mensaje_password.innerHTML = "La contraseña debe contener más de 8 caracteres.";
@@ -50,8 +55,9 @@ form.addEventListener("submit", function(Event){
         .then(response => response.json())
         .then((data)=>{
             console.log(data);
-            if (data.error == false) {
-                window.location.assign("../HTML/dashboard.html");
+            if (data.error == false){
+                localStorage.setItem('login', "true");
+                window.location.href = currentLocation;
             }else if (data.success == false){
                 data.errors.forEach((error)=>{
                     if(error.param ==  "password"){
