@@ -1,0 +1,2 @@
+Git Hub Page: https://xx-juan-x.github.io/Parcial_2_LPPA_Login_Dashboard/HTML/index.html
+ACLARACIÓN: No usar el page que proporciona github porque no va a encontrar la ruta, ya que mi html está dentro de una carpeta.
